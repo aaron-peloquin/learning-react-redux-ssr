@@ -1,4 +1,4 @@
 # Learning
 * React
 * Redux
-* SSR
+* SSR with Next.js
