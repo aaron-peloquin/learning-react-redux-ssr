@@ -1,9 +1,11 @@
 import actionTypes from './../actionTypes'
-import store from './../store'
 
-const addCharacter = () => {
-  console.log("Requesting new character")
-  return dispatch({ type: actionTypes.addCharacter })
+const addCharacter = (dispatch) => {
+  const data = {
+    type: actionTypes.addCharacter,
+    payload: {name:"Test"}
+  }
+  return dispatch(data)
 }
 
 export default addCharacter

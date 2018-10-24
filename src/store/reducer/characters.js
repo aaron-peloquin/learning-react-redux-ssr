@@ -44,8 +44,9 @@ const charactersReducer = (state=defaultState, { type, payload }) => {
       saveToStorage = false
       break
     case actionTypes.addCharacter:
-      state.push(payload)
-      console.log("New state:",state)
+      if(payload) {
+        state.push(payload)
+      }
     break
   }
 

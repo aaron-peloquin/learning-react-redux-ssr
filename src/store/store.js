@@ -1,19 +1,20 @@
 import { createStore, applyMiddleware, combineReducers } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunkMiddleware from 'redux-thunk'
-import actionTypes from './actionTypes'
+
+/** Reducers */
 import charactersReducer from './reducer/characters'
 
 const initialState = {
   test: true
 }
 
-// REDUCERS
+/** Reducers */
 const reducers = combineReducers({
-  charactersReducer
+  characters: charactersReducer
 })
 
-/** initializeStore */
+/** initialize store */
 export function initializeStore (initialState = initialState) {
   return createStore(reducers, initialState, composeWithDevTools(applyMiddleware(thunkMiddleware)))
 }
