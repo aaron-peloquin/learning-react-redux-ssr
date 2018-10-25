@@ -70,6 +70,8 @@ const charactersReducer = (state=defaultState, { type, payload }) => {
       break;
   }
 
+  state = state.slice()
+
   if(saveToStorage) {
     save('characters', state)
   }
