@@ -1,6 +1,6 @@
 import actionTypes from './../actionTypes'
 
-const editCharacter = (dispatch, id, characterData) => {
+const editCharacter = (dispatch, id=-1, characterData={}) => {
   const payload = {
     id: id,
     data: characterData
