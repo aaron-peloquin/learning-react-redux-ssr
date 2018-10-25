@@ -1,5 +1,6 @@
 const actions = {
   addCharacter: "addCharacter",
+  editCharacter: "editCharacter",
   removeCharacter: "removeCharacter",
 }
 
