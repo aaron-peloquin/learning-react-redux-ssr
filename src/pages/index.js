@@ -17,7 +17,7 @@ const index = (props) => {
     </Head>
     <Navigation />
     <h1 onClick={()=>{
-      editCharacter(dispatch,23,{name:"New Name",image:"https://example.com/image.png"})
+      editCharacter(dispatch,2,{name:"New Name",image:"https://example.com/image.png"})
     }
     }>Home</h1>
     <Ele />
