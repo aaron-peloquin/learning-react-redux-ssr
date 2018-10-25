@@ -1,9 +1,9 @@
 import actionTypes from './../actionTypes'
 
-const addCharacter = (dispatch) => {
+const addCharacter = (dispatch, characterName) => {
   const data = {
     type: actionTypes.addCharacter,
-    payload: {name:"Test"}
+    payload: { name: characterName }
   }
   return dispatch(data)
 }
