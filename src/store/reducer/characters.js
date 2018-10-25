@@ -38,7 +38,6 @@ const defaultState = [
 const charactersReducer = (state=defaultState, { type, payload }) => {
   let saveToStorage = true
   const charactersStorage = load('characters')
-
   if(charactersStorage.length>0) {
     state = charactersStorage
   }
@@ -53,20 +52,19 @@ const charactersReducer = (state=defaultState, { type, payload }) => {
         /** Ensure characters always have a name */
         payload.name = payload.name||"New Character"
         /** If this character has any data, add them into the state */
-        state = state.slice().push(payload)
+        state.push(payload)
       }
       break
     /** Update a character's name, background, and image based off it's id */
     case actionTypes.editCharacter:
-      if(payload.id>=0) {
-        state = state.slice()
-
-        state[id].name = payload.name||"Unnamed Character"
-        state[id].background = payload.background||""
-        state[id].image = payload.image||""
+      if(payload.id>=0 && typeof state[payload.id] !== 'undefined') {
+        state[payload.id].name = payload.data.name||"Unnamed Character"
+        state[payload.id].background = payload.data.background||""
+        state[payload.id].image = payload.data.image||""
       }
       else {
-        console.warning(`invalid payload.id on ${actionTypes.editCharacter}`)
+        saveToStorage = false
+        console.warn(`[Redux] invalid payload.id on ${actionTypes.editCharacter}`)
       }
 
       break;
@@ -76,7 +74,7 @@ const charactersReducer = (state=defaultState, { type, payload }) => {
     save('characters', state)
   }
 
-  return state  
+  return state
 }
 
 export default charactersReducer
