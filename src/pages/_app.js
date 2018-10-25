@@ -1,7 +1,8 @@
 import App, {Container} from 'next/app'
 import React from 'react'
-import withReduxStore from '../store/AppWithRedux'
 import { Provider } from 'react-redux'
+
+import withReduxStore from './../store/AppWithRedux'
 
 const MyApp = (props) => {
   const {Component, pageProps, reduxStore} = props
