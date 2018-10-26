@@ -5,23 +5,23 @@ import Link from 'next/link'
 
 import Navigation from '../Navigation'
 
-const index = (props) => {
-  const { id, char } = props
-
-  console.log("Character", id, char)
+const character = (props) => {
+  console.log("Component Props", props)
+  const { id, char, query } = props
 
   return <Fragment>
     <Head>
       <title>Character {id}</title>
     </Head>
     <Navigation />
-    <h1>Character {id}</h1>
+    <h1>Character: {id}</h1>
   </Fragment>
 }
 
 const mapStateToProps = (state, props) => {
+  console.log("props", props)
   const {id} = props
   return {char:state.characters[id]}
 }
 
-export default connect(mapStateToProps)(index)
+export default connect(mapStateToProps)(character)
