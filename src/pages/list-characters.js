@@ -22,7 +22,7 @@ const index = (props) => {
           editing[k] = false
         }
         return <li key={k}>
-          <Link href={`/character/${k}`}>{char.name}</Link>
+          <Link href={`/character?id=${k}`}>{char.name}</Link>
         </li>
       })}
     </ul>
