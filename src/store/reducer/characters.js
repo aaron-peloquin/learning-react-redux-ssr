@@ -1,5 +1,7 @@
 import load from './../../helpers/localStorageLoad'
 import save from './../../helpers/localStorageSave'
+import generateHash from './../../helpers/generateHash'
+import lookupCharacterHash from './../../helpers/lookupCharacterHash'
 import actionTypes from './../actionTypes'
 /**
  * Reducer for the redux key of "characters".
@@ -23,10 +25,7 @@ import actionTypes from './../actionTypes'
  *      @param {int} max the maximum value for this bar
  *      @param {int} val the current value
  */
-
-const defaultState = [
-  {name:"Your first character"}
-]
+const defaultState = new Array()
 
 /**
  * Update the characters state
@@ -51,6 +50,11 @@ const charactersReducer = (state=defaultState, { type, payload }) => {
       if(payload) {
         /** Ensure characters always have a name */
         payload.name = payload.name||"New Character"
+        let hash = generateHash()
+        while(lookupCharacterHash(hash, state)>=0){
+          hash = generateHash()
+        }
+        payload.hash = hash
         /** If this character has any data, add them into the state */
         state.push(payload)
       }
