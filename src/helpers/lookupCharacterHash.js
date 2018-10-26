@@ -5,7 +5,7 @@
  * @returns {int} of the key that was found, or -1
  */
 const lookupCharacterHash = (hash,state) => {
-  const foundChar = state.forEach((v,k)=>{
+  state.forEach((v,k)=>{
     if(v.hash==hash){
       return k
     }
