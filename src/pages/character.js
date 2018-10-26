@@ -1,12 +1,10 @@
 import React, { Fragment } from 'react'
 import { connect } from 'react-redux'
 import Head from 'next/head'
-import Link from 'next/link'
 
 import Navigation from '../Navigation'
 
-const character = (props) => {
-  console.log("Component Props", props)
+const character = props => {
   const { id, char, query } = props
 
   return <Fragment>
@@ -19,7 +17,6 @@ const character = (props) => {
 }
 
 const mapStateToProps = (state, props) => {
-  console.log("props", props)
   const {id} = props
   return {char:state.characters[id]}
 }
