@@ -5,10 +5,6 @@ import thunkMiddleware from 'redux-thunk'
 /** Reducers */
 import charactersReducer from './reducer/characters'
 
-const initialState = {
-  test: true
-}
-
 /** Reducers */
 const reducers = combineReducers({
   characters: charactersReducer
