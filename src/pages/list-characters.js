@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 import Navigation from '../Navigation'
 
-const index = (props) => {
+const listCharacters = (props) => {
   const { dispatch, chars } = props
   let editing = new Array()
   let charI = 0
@@ -22,7 +22,7 @@ const index = (props) => {
           editing[k] = false
         }
         return <li key={k}>
-          <Link href={`/character?id=${k}`}>{char.name}</Link>
+          <Link href={{ pathname: '/character', query: { id: k } }}><a>{char.name}</a></Link>
         </li>
       })}
     </ul>
@@ -33,4 +33,4 @@ const mapStateToProps = state => {
   return {chars:state.characters}
 }
 
-export default connect(mapStateToProps)(index)
+export default connect(mapStateToProps)(listCharacters)
