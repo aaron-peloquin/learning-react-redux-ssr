@@ -9,21 +9,21 @@ import actionTypes from './../actionTypes'
  * 
  * An array of objects.
  *  Each object has 2 keys "name" and "sets"
- *    @param {str} name the display name for this character
- *    @param {str} background a paragraph describing the background of this character
- *    @param {str} image a url link to an image hosted elsewhere on the internet
- *    @param {arr} sets an array of objects containing roll sets for this character.
+ *    @var {str} name the display name for this character
+ *    @var {str} background a paragraph describing the background of this character
+ *    @var {str} image a url link to an image hosted elsewhere on the internet
+ *    @var {arr} sets an array of objects containing roll sets for this character.
  *    Those object's keys are:
- *      @param {str} label a required label for this set
- *      @param {str} note an optional textarea for 
- *      @param {str} primary an optional dice equation
- *      @param {str} secondary an optional second dice equation
- *    @param {arr} bars an array of objects containing roll sets for this character
+ *      @var {str} label a required label for this set
+ *      @var {str} note an optional textarea for 
+ *      @var {str} primary an optional dice equation
+ *      @var {str} secondary an optional second dice equation
+ *    @var {arr} bars an array of objects containing roll sets for this character
  *    Those object's keys are:
- *      @param {str} label the label for this bar (ie: "Health" or "2nd level spell slots")
- *      @param {bool} favorite set to true to give priority
- *      @param {int} max the maximum value for this bar
- *      @param {int} val the current value
+ *      @var {str} label the label for this bar (ie: "Health" or "2nd level spell slots")
+ *      @var {bool} favorite set to true to give priority
+ *      @var {int} max the maximum value for this bar
+ *      @var {int} val the current value
  */
 const defaultState = new Array()
 
