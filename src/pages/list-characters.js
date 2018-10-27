@@ -22,7 +22,7 @@ const listCharacters = (props) => {
           editing[k] = false
         }
         return <li key={k}>
-          <Link href={{ pathname: '/character', query: { id: char.hash } }}><a>{char.name}</a></Link>
+          <Link as={`/character/${char.hash}`} href={`/character?hash=${char.hash}`}><a>{char.name}</a></Link>
         </li>
       })}
     </ul>

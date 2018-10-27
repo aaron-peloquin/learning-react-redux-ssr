@@ -4,7 +4,8 @@ import Head from 'next/head'
 
 import Navigation from '../Navigation'
 
-const character = props => {
+let character = props => {
+  console.log("props?", props)
   const { id, char, query } = props
 
   return <Fragment>
@@ -21,4 +22,9 @@ const mapStateToProps = (state, props) => {
   return {char:state.characters[id]}
 }
 
-export default connect(mapStateToProps)(character)
+// character.componentDidUpdate = (prevProps, prevState, snapshot) => {
+//   console.log("prevProps, prevState, snapshot", prevProps, prevState, snapshot)
+// }
+
+const characterWithState = connect(mapStateToProps)(character)
+export default characterWithState
