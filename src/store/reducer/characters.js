@@ -40,6 +40,8 @@ const charactersReducer = (state=defaultState, { type, payload }) => {
   if(charactersStorage.length>0) {
     state = charactersStorage
   }
+  
+  state = state.slice()
 
   switch (type) {
     default:
@@ -74,7 +76,6 @@ const charactersReducer = (state=defaultState, { type, payload }) => {
       break;
   }
 
-  state = state.slice()
 
   if(saveToStorage) {
     save('characters', state)
