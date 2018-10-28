@@ -2,9 +2,9 @@ import React, { Fragment } from 'react'
 import { connect } from 'react-redux'
 import Head from 'next/head'
 
-import Navigation from './../Navigation'
+import Navigation from '../Navigation'
 
-import addCharacter from './../store/dispatcher/addCharacter'
+import addCharacter from '../store/dispatcher/addCharacter'
 
 const about = (props) => {
   const { dispatch } = props

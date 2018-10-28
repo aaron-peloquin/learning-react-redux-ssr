@@ -2,8 +2,8 @@ import React from 'react'
 import { mount } from 'enzyme'
 import renderer from 'react-test-renderer'
 
-import About from './../pages/about'
-import mockStore from './../testHelpers/mockStore';
+import About from '../pages/about'
+import mockStore from '../testHelpers/mockStore';
 
 describe('About page', () => {
   it('About page has <h1> of "About"', () => {
