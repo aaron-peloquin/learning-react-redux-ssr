@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import Ele from './Ele'
+import Ele from '../Ele'
 
 test('<Ele /> works', () => {
   const component = renderer.create(
