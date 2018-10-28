@@ -11,6 +11,10 @@ test('<Ele /> works', () => {
   expect(tree).toMatchSnapshot();
 })
 
+test('<Ele /> is wrapped in a div', () => {
+  expect(Ele().type).toBe("div")
+})
+
 test('<Ele /> has an ID of "test-element"', () => {
   expect(Ele().props.id).toBe("test-element")
 })
