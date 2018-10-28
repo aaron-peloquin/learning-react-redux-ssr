@@ -10,3 +10,7 @@ test('<Ele /> works', () => {
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 })
+
+test('<Ele /> has an ID of "test-element"', () => {
+  expect(Ele().props.id).toBe("test-element")
+})
