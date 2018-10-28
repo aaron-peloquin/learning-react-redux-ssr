@@ -6,7 +6,7 @@
   "author": "Aaron <aaron4uk@gmail.com>",
   "license": "MIT",
   "quokka": {
-    "babel": true,
+    "babel": {"env":"quokka"},
     "plugins": [
       "jsdom-quokka-plugin"
     ]
