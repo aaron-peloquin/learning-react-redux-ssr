@@ -1,4 +1,3 @@
 node_modules
 .next
-src/__snapshots__/
 src/__tests__/__snapshots__/
