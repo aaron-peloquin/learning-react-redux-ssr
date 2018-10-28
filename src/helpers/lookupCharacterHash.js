@@ -5,12 +5,13 @@
  * @returns {int} of the key that was found, or -1
  */
 const lookupCharacterHash = (hash,state) => {
+  let key = -1
   state.forEach((v,k)=>{
-    if(v.hash==hash){
-      return k
+    if(v.hash===hash){
+      key = k //?
     }
   })
-  return -1
+  return key
 }
 
 export default lookupCharacterHash
