@@ -6,7 +6,9 @@
   "author": "Aaron <aaron4uk@gmail.com>",
   "license": "MIT",
   "quokka": {
-    "babel": {"env":"quokka"},
+    "babel": {
+      "env": "quokka"
+    },
     "plugins": [
       "jsdom-quokka-plugin"
     ]
@@ -36,8 +38,11 @@
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.0.0",
-    "babel-preset-es2015": "^6.24.1",
+    "babel-jest": "^23.6.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "jest": "^23.6.0",
-    "jsdom-quokka-plugin": "^1.0.13"
+    "jsdom-quokka-plugin": "^1.0.13",
+    "react-test-renderer": "^16.6.0"
   }
 }
