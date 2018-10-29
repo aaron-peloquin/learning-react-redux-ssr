@@ -12,7 +12,7 @@
     ]
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --watch",
     "dev": "next ./src/",
     "build": "next build",
     "start": "next start",
