@@ -5,11 +5,11 @@ import { Provider } from 'react-redux'
 import withReduxStore from './../store/AppWithRedux'
 
 const MyApp = (props) => {
-  const {Component, pageProps, reduxStore} = props
+  const {Component, pageProps, router, reduxStore} = props
   return (
     <Container>
       <Provider store={reduxStore}>
-        <Component {...pageProps} />
+        <Component {...pageProps} router={router} />
       </Provider>
     </Container>
   )
