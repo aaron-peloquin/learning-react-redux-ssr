@@ -2,12 +2,13 @@ import React, { Fragment } from 'react'
 import { connect } from 'react-redux'
 import Head from 'next/head'
 
+import lookupCharacterHash from './../helpers/lookupCharacterHash'
+
 import Navigation from '../Navigation'
 
 let character = props => {
-  console.log("props?", props)
   const { id, char, query } = props
-
+  console.log("char",char)
   return <Fragment>
     <Head>
       <title>Character {id}</title>
@@ -18,13 +19,11 @@ let character = props => {
 }
 
 const mapStateToProps = (state, props) => {
-  const {id} = props
-  return {char:state.characters[id]}
+  const hash = props.router.query.hash||0
+  const id = lookupCharacterHash(hash,state.characters)
+  const char = state.characters[id]||{}
+  return {char}
 }
-
-// character.componentDidUpdate = (prevProps, prevState, snapshot) => {
-//   console.log("prevProps, prevState, snapshot", prevProps, prevState, snapshot)
-// }
 
 const characterWithState = connect(mapStateToProps)(character)
 export default characterWithState
