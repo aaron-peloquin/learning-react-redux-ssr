@@ -4,8 +4,6 @@ import Head from 'next/head'
 
 import lookupCharacterHash from './../helpers/lookupCharacterHash'
 
-import Navigation from '../Navigation'
-
 let character = props => {
   const { id, char, query } = props
   console.log("char",char)
@@ -13,7 +11,6 @@ let character = props => {
     <Head>
       <title>Character {id}</title>
     </Head>
-    <Navigation />
     <h1>Character: {id}</h1>
   </Fragment>
 }

@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import Head from 'next/head'
 import Link from 'next/link'
 
-import Navigation from '../Navigation'
 
 const listCharacters = (props) => {
   const { dispatch, chars } = props
@@ -13,7 +12,6 @@ const listCharacters = (props) => {
     <Head>
       <title>Characters List</title>
     </Head>
-    <Navigation />
     <h1>Characters</h1>
     <ul>
       {chars.map((char,k)=>{

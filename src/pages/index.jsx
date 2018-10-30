@@ -3,10 +3,9 @@ import { connect } from 'react-redux'
 
 import Head from 'next/head'
 
-import Ele from './../Ele'
-import Navigation from './../Navigation'
+import Ele from '../Ele'
 
-import editCharacter from './../store/dispatcher/editCharacter'
+import editCharacter from '../store/dispatcher/editCharacter'
 
 const index = (props) => {
   const { dispatch } = props
@@ -15,7 +14,6 @@ const index = (props) => {
     <Head>
       <title>Home</title>
     </Head>
-    <Navigation />
     <h1 onClick={()=>{
       editCharacter(dispatch,2,{name:"New Name",image:"https://example.com/image.png"})
     }

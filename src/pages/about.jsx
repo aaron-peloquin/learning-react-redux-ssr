@@ -2,8 +2,6 @@ import React, { Fragment } from 'react'
 import { connect } from 'react-redux'
 import Head from 'next/head'
 
-import Navigation from '../Navigation'
-
 import addCharacter from '../store/dispatcher/addCharacter'
 
 const about = (props) => {
@@ -13,7 +11,6 @@ const about = (props) => {
       <Head>
         <title>About</title>
       </Head>
-      <Navigation />
       <h1 onClick={()=>{addCharacter(dispatch)}}>About</h1>
     </Fragment>
   }
