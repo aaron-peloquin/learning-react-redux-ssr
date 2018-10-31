@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 import Head from 'next/head'
 
-import Ele from '../Ele'
+import Ele from '../components/Ele'
 
 import editCharacter from '../store/dispatcher/editCharacter'
 
