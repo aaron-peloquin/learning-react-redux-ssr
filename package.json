@@ -17,10 +17,15 @@
     "serve": "node ./src/server.js",
     "build": "next build",
     "start": "next start",
-    "export": "next export"
+    "export": "next export",
+    "startelec": "electron ./src/main/index.js",
+    "buildelec": "next build src && next export src",
+    "distelec": "npm run build && build --dir"
   },
   "dependencies": {
     "@material-ui/core": "^3.3.0",
+    "electron-is-dev": "^1.0.1",
+    "electron-next": "^3.1.5",
     "express": "^4.16.4",
     "next": "^7.0.2",
     "react": "^16.5.2",
@@ -42,6 +47,8 @@
     "babel-jest": "^23.6.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "electron": "^3.0.6",
+    "electron-builder": "^20.29.0",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
     "jest": "^23.6.0",
