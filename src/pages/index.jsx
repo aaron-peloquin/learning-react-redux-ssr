@@ -7,12 +7,11 @@ import Ele from '../components/Ele'
 
 import editCharacter from '../store/dispatcher/editCharacter'
 
-const index = (props) => {
-  const { dispatch } = props
-  
+let index = (props) => {
+  const { dispatch, title } = props
   return <Fragment>
     <Head>
-      <title>Home</title>
+      <title>{title}</title>
     </Head>
     <h1 onClick={()=>{
       editCharacter(dispatch,2,{name:"New Name",image:"https://example.com/image.png"})
@@ -21,5 +20,10 @@ const index = (props) => {
     <Ele />
   </Fragment>
 }
+
+  index.getInitialProps = async ({ req }) => {
+    const title = "Home"
+    return { title }
+  }
 
 export default connect()(index)

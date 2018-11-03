@@ -9,9 +9,6 @@ const listCharacters = (props) => {
   let editing = new Array()
   let charI = 0
   return <Fragment>
-    <Head>
-      <title>Characters List</title>
-    </Head>
     <h1>Characters</h1>
     <ul>
       {chars.map((char,k)=>{
