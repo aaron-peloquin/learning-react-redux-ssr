@@ -6,17 +6,15 @@ import addCharacter from '../store/dispatcher/addCharacter'
 
 let about = (props) => {
   const { dispatch, title } = props
-
   return <Fragment>
-          <Head>
-            <title>{title}</title>
-          </Head>
+    <Head>
+      <title>{title}</title>
+    </Head>
+    <h1 onClick={()=>{addCharacter(dispatch)}}>About</h1>
+  </Fragment>
+}
 
-      <h1 onClick={()=>{addCharacter(dispatch)}}>About</h1>
-    </Fragment>
-  }
-
-  about.getInitialProps = async ({ req }) => {
+about.getInitialProps = async ({ req }) => {
   const title = "About"
   return { title }
 }
